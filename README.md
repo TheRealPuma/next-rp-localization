@@ -3,12 +3,12 @@
 <a id="top"></a>
 
 [![English](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7-English-2ea44f?style=for-the-badge)](#-english)
-[![Українська](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%A6-Українська-f4d04e?style=for-the-badge)](#-українська)
 [![Deutsch](https://img.shields.io/badge/%F0%9F%87%A9%F0%9F%87%AA-Deutsch-d73a49?style=for-the-badge)](#-deutsch)
 [![Polski](https://img.shields.io/badge/%F0%9F%87%B5%F0%9F%87%B1-Polski-9b59b6?style=for-the-badge)](#-polski)
+[![Українська](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%A6-Українська-f4d04e?style=for-the-badge)](#-українська)
 [![Русский](https://img.shields.io/badge/%F0%9F%87%B7%F0%9F%87%BA-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-1f6feb?style=for-the-badge)](#-русский)
 
-> Next RP localization repository. Required languages: **`ru`**, **`ua`**, **`en`**, **`de`**, **`pl`** + optional `fr`, `zh`. Every PR is auto-validated via `npm test`.
+> Next RP localization repository. Required languages: **`en`**, **`de`**, **`pl`**, **`ua`**, **`ru`** + optional `fr`, `zh`. Every PR is auto-validated via `npm test`.
 
 ---
 
@@ -19,7 +19,7 @@ Hey! First time here? No worries, it's simpler than it looks. Step-by-step below
 ### Before you start
 
 - All strings live in `.js` files inside per-system folders (`account/`, `bank/`, `quests/`, etc.).
-- Each string is an object with language keys. **All 5 languages (`ru`, `ua`, `en`, `de`, `pl`) are required.**
+- Each string is an object with language keys. **All 5 languages (`en`, `de`, `pl`, `ua`, `ru`) are required.**
 - Every PR is checked by `npm test` — it validates syntax, placeholders, and unsafe code. Red CI = no merge.
 
 ### Steps
@@ -27,8 +27,8 @@ Hey! First time here? No worries, it's simpler than it looks. Step-by-step below
 1. **Fork** this repo (`Fork` button at the top right on GitHub).
 2. **Clone your fork** locally:
    ```sh
-   git clone https://github.com/<your-username>/olymp-rp-localization.git
-   cd olymp-rp-localization
+   git clone https://github.com/<your-username>/next-rp-localization.git
+   cd next-rp-localization
    ```
 3. **Create a branch** (one branch = one PR):
    ```sh
@@ -53,23 +53,23 @@ Hey! First time here? No worries, it's simpler than it looks. Step-by-step below
 
 ```js
 loginRecovery: {
-    ru: 'Восстановление логина',
-    ua: 'Відновлення логіну',
     en: 'Login Recovery',
     de: 'Login-Wiederherstellung',
     pl: 'Odzyskiwanie loginu',
+    ua: 'Відновлення логіну',
+    ru: 'Восстановление логина',
 },
 ```
 
 **Rules:**
 - Never skip any of the 5 base languages.
-- Placeholders like `{{name}}`, `{{amount}}` must match **across all** languages. If `en` has `{{count}}` — `ru`, `ua`, `de`, `pl` need it too.
+- Placeholders like `{{name}}`, `{{amount}}` must match **across all** languages. If `en` has `{{count}}` — `de`, `pl`, `ua`, `ru` need it too.
 - Don't use `${...}` template literals — plain `'...'` / `"..."` only.
 - No `<script>`, `onclick=`, `javascript:` — the validator will reject it.
 
 ### Pre-PR checklist
 
-- [ ] All 5 languages filled (`ru`, `ua`, `en`, `de`, `pl`).
+- [ ] All 5 languages filled (`en`, `de`, `pl`,`ua`, `ru`).
 - [ ] Placeholders identical across languages.
 - [ ] Translation is human, not raw Google Translate.
 - [ ] `npm test` is green locally.
