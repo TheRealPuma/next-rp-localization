@@ -3,174 +3,106 @@
 <a id="top"></a>
 
 [![English](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7-English-2ea44f?style=for-the-badge)](#-english)
+[![Русский](https://img.shields.io/badge/%F0%9F%87%B7%F0%9F%87%BA-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-1f6feb?style=for-the-badge)](#-русский)
 [![Deutsch](https://img.shields.io/badge/%F0%9F%87%A9%F0%9F%87%AA-Deutsch-d73a49?style=for-the-badge)](#-deutsch)
 [![Polski](https://img.shields.io/badge/%F0%9F%87%B5%F0%9F%87%B1-Polski-9b59b6?style=for-the-badge)](#-polski)
-[![Українська](https://img.shields.io/badge/%F0%9F%87%BA%F0%9F%87%A6-Українська-f4d04e?style=for-the-badge)](#-українська)
-[![Русский](https://img.shields.io/badge/%F0%9F%87%B7%F0%9F%87%BA-%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9-1f6feb?style=for-the-badge)](#-русский)
+[![Français](https://img.shields.io/badge/%F0%9F%87%AB%F0%9F%87%B7-Fran%C3%A7ais-0055a4?style=for-the-badge)](#-français)
+[![Español](https://img.shields.io/badge/%F0%9F%87%AA%F0%9F%87%B8-Espa%C3%B1ol-e63946?style=for-the-badge)](#-español)
+[![Italiano](https://img.shields.io/badge/%F0%9F%87%AE%F0%9F%87%B9-Italiano-009246?style=for-the-badge)](#-italiano)
+[![Português](https://img.shields.io/badge/%F0%9F%87%B5%F0%9F%87%B9-Portugu%C3%AAs-046a38?style=for-the-badge)](#-português)
+[![Türkçe](https://img.shields.io/badge/%F0%9F%87%B9%F0%9F%87%B7-T%C3%BCrk%C3%A7e-e30a17?style=for-the-badge)](#-türkçe)
+[![العربية](https://img.shields.io/badge/%F0%9F%87%B8%F0%9F%87%A6-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9-000000?style=for-the-badge)](#-العربية)
+[![中文](https://img.shields.io/badge/%F0%9F%87%A8%F0%9F%87%B3-%E4%B8%AD%E6%96%87-de2910?style=for-the-badge)](#-中文)
+[![日本語](https://img.shields.io/badge/%F0%9F%87%AF%F0%9F%87%B5-日本語-bc002d?style=for-the-badge)](#-日本語)
+[![한국어](https://img.shields.io/badge/%F0%9F%87%B0%F0%9F%87%B7-한국어-003478?style=for-the-badge)](#-한국어)
+[![हिन्दी](https://img.shields.io/badge/%F0%9F%87%AE%F0%9F%87%B3-%E0%A4%B9%E0%A4%BF%E0%A4%A8%E0%A5%8D%E0%A4%A6%E0%A5%80-ff9933?style=for-the-badge)](#-हिन्दी)
 
-> Next RP localization repository. Required languages: **`en`**, **`de`**, **`pl`**, **`ua`**, **`ru`** + optional `fr`, `zh`. Every PR is auto-validated via `npm test`.
+> Next RP localization repository. Required languages: **`en`**, **`ru`**, **`de`**, **`pl`**, **`fr`**. Optional languages: `es`, `it`, `pt`, `tr`, `ar`, `zh`, `ja`, `ko`, `hi`. Every PR is auto-validated via `npm test`.
 
 ---
 
 # 🇬🇧 English
 
-Hey! First time here? No worries — it’s simpler than it looks. Step-by-step below.
+Hey! First time here? No worries — it’s simpler than it looks.
 
 ## Before you start
 
-- All strings live in `.js` files inside per-system folders (`account/`, `bank/`, `quests/`, etc.).
-- Each string is an object with language keys.
-- **All 5 languages (`en`, `de`, `pl`, `ua`, `ru`) are required.**
-- Every PR is checked by `npm test` — it validates syntax, placeholders, and unsafe code. Red CI = no merge.
-
-## Steps
-
-1. **Fork** this repo (`Fork` button at the top right on GitHub).
-2. **Clone your fork** locally:
-   ```sh
-   git clone https://github.com/<your-username>/next-rp-localization.git
-   cd next-rp-localization
-   ```
-
-3. **Create a branch** (one branch = one PR):
-   ```sh
-   git checkout -b fix/account-login-en
-   ```
-
-4. **Find the file.**
-   Files are grouped by system:
-   - login → `account/`
-   - bank → `bank/`
-   - quests → `quests/`
-
-5. **Edit or add the key.** Format below.
-
-6. **Validate locally** (requires Node.js 20+):
-   ```sh
-   npm test
-   ```
-
-   Green? Move on.  
-   Red? Read the output — it points to the exact file and line.
-
-7. **Commit & push:**
-   ```sh
-   git add .
-   git commit -m "account: fix english translation for loginRecovery"
-   git push origin fix/account-login-en
-   ```
-
-8. **Open a Pull Request** to the `master` branch of the upstream repo. Describe what you changed and why.
+* All strings live in `.js` files grouped by system folders.
+* Every translation entry uses language keys.
+* Required languages: `en`, `ru`, `de`, `pl`, `fr`
+* Optional languages are welcome.
+* Every PR is validated automatically with `npm test`.
 
 ## Translation format
 
 ```js
 loginRecovery: {
     en: 'Login Recovery',
+    ru: 'Восстановление логина',
     de: 'Login-Wiederherstellung',
     pl: 'Odzyskiwanie loginu',
-    ua: 'Відновлення логіну',
-    ru: 'Восстановление логина',
+    fr: 'Récupération de connexion',
 },
 ```
 
 ## Rules
 
-- Never skip any of the 5 base languages.
-- Placeholders like `{{name}}`, `{{amount}}` must match across all languages.
-- If `en` contains `{{count}}`, then every other language must contain it too.
-- Don’t use `${...}` template literals — plain `'...'` or `"..."` only.
-- No `<script>`, `onclick=`, or `javascript:` — the validator will reject it.
-
-## Pre-PR checklist
-
-- [ ] All 5 languages filled (`en`, `de`, `pl`, `ua`, `ru`)
-- [ ] Placeholders identical across languages
-- [ ] Translation is human, not raw Google Translate
-- [ ] `npm test` passes locally
-- [ ] Commit message follows `<area>: <what you did>`
+* Never skip required languages.
+* Keep placeholders identical across all languages.
+* Do not use `${...}` template literals.
+* No unsafe HTML or JavaScript.
 
 [⬆ Back to top](#top)
 
 ---
 
-# 🇩🇪 Deutsch
+# 🇷🇺 Русский
 
-Hi! Zum ersten Mal hier? Keine Sorge — es ist einfacher, als es aussieht. Schritt für Schritt unten.
+Привет! Добро пожаловать в систему локализации Next RP.
 
-## Bevor du loslegst
+## Основное
 
-- Alle Strings befinden sich in `.js`-Dateien innerhalb der Systemordner (`account/`, `bank/`, `quests/` usw.).
-- Jeder String ist ein Objekt mit Sprachschlüsseln.
-- **Alle 5 Sprachen (`en`, `de`, `pl`, `ua`, `ru`) sind Pflicht.**
-- Jeder PR wird durch `npm test` geprüft — Syntax, Platzhalter und unsicherer Code werden validiert. Rotes CI = kein Merge.
+* Все строки находятся в `.js` файлах.
+* Обязательные языки: `en`, `ru`, `de`, `pl`, `fr`
+* PR автоматически проверяются через `npm test`.
 
-## Schritte
-
-1. **Erstelle einen Fork** dieses Repositories.
-2. **Klone deinen Fork** lokal:
-   ```sh
-   git clone https://github.com/<dein-name>/next-rp-localization.git
-   cd next-rp-localization
-   ```
-
-3. **Erstelle einen Branch** (ein Branch = ein PR):
-   ```sh
-   git checkout -b fix/account-login-de
-   ```
-
-4. **Finde die richtige Datei.**
-   Dateien sind nach Systemen sortiert:
-   - Login → `account/`
-   - Bank → `bank/`
-   - Quests → `quests/`
-
-5. **Bearbeite oder ergänze den Schlüssel.**
-
-6. **Lokal prüfen** (Node.js 20+ erforderlich):
-   ```sh
-   npm test
-   ```
-
-   Grün? Weiter.  
-   Rot? Lies die Ausgabe — dort stehen Datei und Zeile.
-
-7. **Committen & Pushen:**
-   ```sh
-   git add .
-   git commit -m "account: fix german translation for loginRecovery"
-   git push origin fix/account-login-de
-   ```
-
-8. **Öffne einen Pull Request** gegen den `master`-Branch des Hauptrepositories. Beschreibe, was du geändert hast und warum.
-
-## Übersetzungsformat
+## Формат
 
 ```js
 loginRecovery: {
     en: 'Login Recovery',
+    ru: 'Восстановление логина',
     de: 'Login-Wiederherstellung',
     pl: 'Odzyskiwanie loginu',
-    ua: 'Відновлення логіну',
-    ru: 'Восстановление логина',
+    fr: 'Récupération de connexion',
 },
 ```
 
-## Regeln
+[⬆ Наверх](#top)
 
-- Keine der 5 Basissprachen auslassen.
-- Platzhalter wie `{{name}}` oder `{{amount}}` müssen überall identisch sein.
-- Wenn `en` ein `{{count}}` enthält, müssen alle anderen Sprachen es ebenfalls enthalten.
-- Keine `${...}`-Template-Strings verwenden.
-- Kein `<script>`, `onclick=` oder `javascript:`.
+---
 
-## Pre-PR-Checkliste
+# 🇩🇪 Deutsch
 
-- [ ] Alle 5 Sprachen ausgefüllt (`en`, `de`, `pl`, `ua`, `ru`)
-- [ ] Platzhalter überall identisch
-- [ ] Übersetzung von Hand geschrieben
-- [ ] `npm test` lokal erfolgreich
-- [ ] Commit-Message im Format `<bereich>: <änderung>`
+Willkommen beim Next RP Übersetzungsprojekt.
+
+## Wichtig
+
+* Alle Texte liegen in `.js` Dateien.
+* Pflichtsprachen: `en`, `ru`, `de`, `pl`, `fr`
+* Jeder PR wird automatisch geprüft.
+
+## Format
+
+```js
+loginRecovery: {
+    en: 'Login Recovery',
+    ru: 'Восстановление логина',
+    de: 'Login-Wiederherstellung',
+    pl: 'Odzyskiwanie loginu',
+    fr: 'Récupération de connexion',
+},
+```
 
 [⬆ Nach oben](#top)
 
@@ -178,245 +110,94 @@ loginRecovery: {
 
 # 🇵🇱 Polski
 
-Cześć! Pierwszy raz tutaj? Spokojnie — to prostsze, niż wygląda. Instrukcja krok po kroku poniżej.
+Witaj w projekcie tłumaczeń Next RP.
 
-## Zanim zaczniesz
+## Ważne
 
-- Wszystkie teksty znajdują się w plikach `.js` w folderach systemów (`account/`, `bank/`, `quests/` itd.).
-- Każdy wpis jest obiektem z kluczami językowymi.
-- **Wszystkie 5 języków (`en`, `de`, `pl`, `ua`, `ru`) jest wymagane.**
-- Każdy PR jest sprawdzany przez `npm test` — sprawdzana jest składnia, placeholdery i niebezpieczny kod.
+* Wszystkie teksty są w plikach `.js`.
+* Wymagane języki: `en`, `ru`, `de`, `pl`, `fr`
+* Każdy PR przechodzi automatyczne testy.
 
-## Krok po kroku
-
-1. **Zrób fork** repozytorium.
-2. **Sklonuj swojego forka** lokalnie:
-   ```sh
-   git clone https://github.com/<twój-login>/next-rp-localization.git
-   cd next-rp-localization
-   ```
-
-3. **Utwórz branch** (jeden branch = jeden PR):
-   ```sh
-   git checkout -b fix/account-login-pl
-   ```
-
-4. **Znajdź odpowiedni plik.**
-   - login → `account/`
-   - bank → `bank/`
-   - questy → `quests/`
-
-5. **Dodaj lub edytuj klucz.**
-
-6. **Uruchom testy lokalnie** (Node.js 20+):
-   ```sh
-   npm test
-   ```
-
-   Zielone? Lecimy dalej.  
-   Czerwone? Output pokaże dokładny plik i linię.
-
-7. **Commit i push:**
-   ```sh
-   git add .
-   git commit -m "account: fix polish translation for loginRecovery"
-   git push origin fix/account-login-pl
-   ```
-
-8. **Otwórz Pull Request** do brancha `master` głównego repozytorium. Opisz, co zmieniłeś i dlaczego.
-
-## Format tłumaczenia
+## Format
 
 ```js
 loginRecovery: {
     en: 'Login Recovery',
+    ru: 'Восстановление логина',
     de: 'Login-Wiederherstellung',
     pl: 'Odzyskiwanie loginu',
-    ua: 'Відновлення логіну',
-    ru: 'Восстановление логина',
+    fr: 'Récupération de connexion',
 },
 ```
-
-## Zasady
-
-- Nie pomijaj żadnego z 5 podstawowych języków.
-- Placeholdery muszą być identyczne we wszystkich językach.
-- Jeśli `en` zawiera `{{count}}`, pozostałe języki również muszą go zawierać.
-- Nie używaj `${...}`.
-- Bez `<script>`, `onclick=` i `javascript:`.
-
-## Checklista przed PR
-
-- [ ] Wszystkie 5 języków uzupełnione (`en`, `de`, `pl`, `ua`, `ru`)
-- [ ] Placeholdery identyczne
-- [ ] Tłumaczenie napisane przez człowieka
-- [ ] `npm test` przechodzi poprawnie
-- [ ] Commit message ma poprawny format
 
 [⬆ Do góry](#top)
 
 ---
 
-# 🇺🇦 Українська
+# 🇫🇷 Français
 
-Привіт! Якщо ти тут уперше — не хвилюйся, усе простіше, ніж здається. Покрокова інструкція нижче.
+Bienvenue dans le projet de localisation Next RP.
 
-## Що потрібно знати
+## Important
 
-- Усі рядки знаходяться у `.js`-файлах у папках систем (`account/`, `bank/`, `quests/` тощо).
-- Кожен рядок — це обʼєкт із мовними ключами.
-- **Усі 5 мов (`en`, `de`, `pl`, `ua`, `ru`) є обовʼязковими.**
-- Кожен PR перевіряється через `npm test` — перевіряються синтаксис, плейсхолдери та небезпечний код.
+* Toutes les chaînes sont stockées dans des fichiers `.js`.
+* Langues obligatoires : `en`, `ru`, `de`, `pl`, `fr`
+* Chaque PR est vérifiée automatiquement.
 
-## Покроково
-
-1. **Зроби fork** репозиторію.
-2. **Склонуй fork локально:**
-   ```sh
-   git clone https://github.com/<твій-нік>/next-rp-localization.git
-   cd next-rp-localization
-   ```
-
-3. **Створи branch** (один branch = один PR):
-   ```sh
-   git checkout -b fix/account-login-ua
-   ```
-
-4. **Знайди потрібний файл.**
-   - логін → `account/`
-   - банк → `bank/`
-   - квести → `quests/`
-
-5. **Відредагуй або додай ключ.**
-
-6. **Перевір локально** (Node.js 20+):
-   ```sh
-   npm test
-   ```
-
-   Зелене? Рухаймося далі.  
-   Червоне? У виводі буде вказано файл і рядок.
-
-7. **Зроби commit і push:**
-   ```sh
-   git add .
-   git commit -m "account: fix ukrainian translation for loginRecovery"
-   git push origin fix/account-login-ua
-   ```
-
-8. **Відкрий Pull Request** у `master` основного репозиторію. Опиши, що змінив і навіщо.
-
-## Формат перекладу
+## Format
 
 ```js
 loginRecovery: {
     en: 'Login Recovery',
+    ru: 'Восстановление логина',
     de: 'Login-Wiederherstellung',
     pl: 'Odzyskiwanie loginu',
-    ua: 'Відновлення логіну',
-    ru: 'Восстановление логина',
+    fr: 'Récupération de connexion',
 },
 ```
 
-## Правила
-
-- Не пропускай жодну з 5 мов.
-- Плейсхолдери мають бути однаковими в усіх мовах.
-- Якщо `en` містить `{{count}}`, інші мови також повинні його містити.
-- Не використовуй `${...}`.
-- Без `<script>`, `onclick=` і `javascript:`.
-
-## Чек-лист перед PR
-
-- [ ] Усі 5 мов заповнені (`en`, `de`, `pl`, `ua`, `ru`)
-- [ ] Плейсхолдери однакові
-- [ ] Переклад написаний людиною
-- [ ] `npm test` проходить успішно
-- [ ] Commit message у правильному форматі
-
-[⬆ Нагору](#top)
+[⬆ Retour en haut](#top)
 
 ---
 
-# 🇷🇺 Русский
+# 🌍 Additional Languages
 
-Привет! Если ты здесь впервые — не переживай, всё проще, чем кажется. Пошаговая инструкция ниже.
+## 🇪🇸 Español
 
-## Что нужно знать
+Las traducciones opcionales son bienvenidas.
 
-- Все строки находятся в `.js`-файлах по папкам (`account/`, `bank/`, `quests/` и т.д.).
-- Каждая строка — объект с языковыми ключами.
-- **Все 5 языков (`en`, `de`, `pl`, `ua`, `ru`) обязательны.**
-- Каждый PR проверяется через `npm test` — проверяются синтаксис, плейсхолдеры и небезопасный код.
+## 🇮🇹 Italiano
 
-## Пошагово
+Le traduzioni opzionali sono benvenute.
 
-1. **Сделай fork** репозитория.
-2. **Склонируй fork локально:**
-   ```sh
-   git clone https://github.com/<твой-ник>/next-rp-localization.git
-   cd next-rp-localization
-   ```
+## 🇵🇹 Português
 
-3. **Создай branch** (одна ветка = один PR):
-   ```sh
-   git checkout -b fix/account-login-ru
-   ```
+Traduções opcionais são bem-vindas.
 
-4. **Найди нужный файл.**
-   - логин → `account/`
-   - банк → `bank/`
-   - квесты → `quests/`
+## 🇹🇷 Türkçe
 
-5. **Отредактируй или добавь ключ.**
+İsteğe bağlı çeviriler kabul edilir.
 
-6. **Проверь локально** (Node.js 20+):
-   ```sh
-   npm test
-   ```
+## 🇸🇦 العربية
 
-   Зелёный результат? Продолжай.  
-   Красный? В выводе будет указан файл и строка.
+الترجمات الإضافية مرحب بها.
 
-7. **Сделай commit и push:**
-   ```sh
-   git add .
-   git commit -m "account: fix russian translation for loginRecovery"
-   git push origin fix/account-login-ru
-   ```
+## 🇨🇳 中文
 
-8. **Открой Pull Request** в `master` основного репозитория. Опиши, что изменил и зачем.
+欢迎提交额外翻译。
 
-## Формат строки
+## 🇯🇵 日本語
 
-```js
-loginRecovery: {
-    en: 'Login Recovery',
-    de: 'Login-Wiederherstellung',
-    pl: 'Odzyskiwanie loginu',
-    ua: 'Відновлення логіну',
-    ru: 'Восстановление логина',
-},
-```
+追加翻訳を歓迎します。
 
-## Правила
+## 🇰🇷 한국어
 
-- Не пропускай ни один из 5 языков.
-- Плейсхолдеры должны совпадать во всех языках.
-- Если в `en` есть `{{count}}`, он должен быть и во всех остальных языках.
-- Не используй `${...}`.
-- Без `<script>`, `onclick=` и `javascript:`.
+추가 번역 기여를 환영합니다.
 
-## Чек-лист перед PR
+## 🇮🇳 हिन्दी
 
-- [ ] Все 5 языков заполнены (`en`, `de`, `pl`, `ua`, `ru`)
-- [ ] Плейсхолдеры одинаковые
-- [ ] Перевод написан человеком
-- [ ] `npm test` проходит успешно
-- [ ] Commit message в правильном формате
-
-[⬆ Наверх](#top)
+अतिरिक्त अनुवादों का स्वागत है।
 
 ---
 
-Thanks for contributing! · Дякуємо за внесок! · Danke fürs Mitmachen! · Dzięki za wkład! · Спасибо за вклад!
+Thanks for contributing! · Спасибо за вклад! · Danke fürs Mitmachen! · Dzięki za wkład! · Merci pour votre contribution!
